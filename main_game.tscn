@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://caqb75q56y55h"]
+
+[ext_resource type="PackedScene" uid="uid://dqdd231bm7dtc" path="res://Player.tscn" id="1_1oj5k"]
+
+[node name="Main Game" type="Node3D" unique_id=654691836]
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=264161822]
+transform = Transform3D(28.807098, 0, 0, 0, 1, 0, 0, 0, 5.143624, -0.9143989, 0.18928146, 0.6653688)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=133511448]
+transform = Transform3D(-0.023123562, 0, -0.9997326, 0, 1, 0, 0.9997326, 0, -0.023123562, -2.9402115, 3.800634, -1.535136)
+
+[node name="CharacterBody3D" parent="." unique_id=489180854 instance=ExtResource("1_1oj5k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4320283, -1.4721045)
