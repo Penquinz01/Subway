@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://2hrfooq17ep1"]
+
+[ext_resource type="FontFile" uid="uid://dpcte75snv63i" path="res://UI/Fonts/Roboto_Condensed-Bold.ttf" id="1_3i1b0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6jcrg"]
+font = ExtResource("1_3i1b0")
+font_size = 36
+
+[node name="UI" type="Control" unique_id=933190388]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Question" type="Label" parent="." unique_id=441315693]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 432.0
+text = "Is It True Or False?"
+label_settings = SubResource("LabelSettings_6jcrg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Guides True" type="Label" parent="." unique_id=545600339]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 625.0
+offset_right = 726.0
+offset_bottom = 735.0
+text = "                      True"
+label_settings = SubResource("LabelSettings_6jcrg")
+vertical_alignment = 1
+
+[node name="Guides False" type="Label" parent="." unique_id=1683426927]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 625.0
+offset_right = 726.0
+offset_bottom = 735.0
+text = "False                         "
+label_settings = SubResource("LabelSettings_6jcrg")
+horizontal_alignment = 2
+vertical_alignment = 1

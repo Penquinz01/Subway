@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://caqb75q56y55h"]
+
+[ext_resource type="PackedScene" uid="uid://dqdd231bm7dtc" path="res://Scene/Player.tscn" id="1_1oj5k"]
+[ext_resource type="Environment" uid="uid://dopwlvgq1tjd7" path="res://Environment.tres" id="1_htkpn"]
+[ext_resource type="PackedScene" uid="uid://cq6ou6ynslnb8" path="res://Scene/level.tscn" id="2_vh4eo"]
+[ext_resource type="PackedScene" uid="uid://2hrfooq17ep1" path="res://Scene/ui.tscn" id="4_1btii"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vh4eo"]
+dof_blur_amount = 0.28
+
+[sub_resource type="Compositor" id="Compositor_vh4eo"]
+
+[node name="Main Game" type="Node3D" unique_id=654691836]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=124949012]
+environment = ExtResource("1_htkpn")
+camera_attributes = SubResource("CameraAttributesPractical_vh4eo")
+compositor = SubResource("Compositor_vh4eo")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=133511448]
+transform = Transform3D(0.9999757, 0.004716471, -0.005147125, -0.0034906298, 0.97628784, 0.21644859, 0.006045949, -0.21642536, 0.97628045, 0.016305385, 2.528096, 18.256184)
+environment = ExtResource("1_htkpn")
+current = true
+fov = 90.1
+far = 45.03
+
+[node name="CharacterBody3D" parent="." unique_id=489180854 node_paths=PackedStringArray("leftPosition", "midPosition", "rightPosition") instance=ExtResource("1_1oj5k")]
+transform = Transform3D(-0.57, 3.303947e-09, -8.6004164e-08, 0, 0.56957984, 0.021881051, 8.606761e-08, 0.021881051, -0.56957984, 0.04405558, 0.10564846, 14.426041)
+leftPosition = NodePath("../Left Position")
+midPosition = NodePath("../MidPosition")
+rightPosition = NodePath("../RightPosition")
+offset = 0.075
+
+[node name="Left Position" type="Node3D" parent="." unique_id=261120020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7326559, 0, 14)
+
+[node name="MidPosition" type="Node3D" parent="." unique_id=903505104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010251403, 0, 14)
+
+[node name="RightPosition" type="Node3D" parent="." unique_id=701088003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7335207, 0, 14)
+metadata/_edit_group_ = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1703671225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.6495442)
+light_color = Color(0.83137256, 0.8352941, 0.8980392, 1)
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 1.422
+light_specular = 0.0
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="Level" parent="." unique_id=1456934030 instance=ExtResource("2_vh4eo")]
+transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
+
+[node name="GameManager" type="Node3D" parent="." unique_id=473153039]
+transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
+
+[node name="UI" parent="." unique_id=933190388 instance=ExtResource("4_1btii")]

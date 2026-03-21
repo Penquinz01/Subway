@@ -1,0 +1,31 @@
+[gd_resource type="Environment" format=3 uid="uid://dopwlvgq1tjd7"]
+
+[ext_resource type="Texture2D" uid="uid://tr8ogv0xgvq2" path="res://Assets/AllSkyFree_Godot-10e858fef0a9c5fa071de8bc191c3b4bef00edda/Screenshots/_0004_AllSkyFree_Screen_06.jpg" id="1_xdv8o"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_1btii"]
+panorama = ExtResource("1_xdv8o")
+energy_multiplier = 0.5
+
+[sub_resource type="Sky" id="Sky_44mwd"]
+sky_material = SubResource("PanoramaSkyMaterial_1btii")
+radiance_size = 1
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_44mwd")
+sky_rotation = Vector3(0, -4.6931906, 0)
+tonemap_mode = 3
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.6313726, 0.70980394, 0.81960785, 1)
+fog_light_energy = 4.39
+fog_sun_scatter = 0.4
+fog_density = 1.0
+fog_aerial_perspective = 1.0
+fog_depth_begin = 2.0
+fog_depth_end = 30.0
+volumetric_fog_density = 0.0885
+volumetric_fog_albedo = Color(0.30816546, 0.49187273, 0.60177314, 1)
+volumetric_fog_emission = Color(0.5921569, 0.5921569, 0.63529414, 1)
+volumetric_fog_emission_energy = 0.25
+volumetric_fog_detail_spread = 1.5691684

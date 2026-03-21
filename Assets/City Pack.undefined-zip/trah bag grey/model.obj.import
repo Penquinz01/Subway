@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcpcd658s60ka"
+path="res://.godot/imported/model.obj-aa9756c5370dbbecbc929fe8fbcf78bc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/model.obj-aa9756c5370dbbecbc929fe8fbcf78bc.mesh"]
+
+source_file="res://Assets/City Pack.undefined-zip/trah bag grey/model.obj"
+dest_files=["res://.godot/imported/model.obj-aa9756c5370dbbecbc929fe8fbcf78bc.mesh", "res://.godot/imported/model.obj-aa9756c5370dbbecbc929fe8fbcf78bc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

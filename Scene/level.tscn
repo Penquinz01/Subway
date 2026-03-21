@@ -1,0 +1,646 @@
+[gd_scene format=3 uid="uid://cq6ou6ynslnb8"]
+
+[ext_resource type="ArrayMesh" uid="uid://8xvc78nky2mr" path="res://Assets/City Pack.undefined-zip/Road Bits/Cube_951.res" id="1_3bu56"]
+[ext_resource type="ArrayMesh" uid="uid://b15h8gwt7jmjk" path="res://Assets/City Pack.undefined-zip/Road Bits/Cube_952.res" id="2_jnrmd"]
+[ext_resource type="PackedScene" uid="uid://b81c045g6v7v1" path="res://Assets/City Pack.undefined-zip/Big Building/Building3_Big.fbx" id="3_jnrmd"]
+[ext_resource type="PackedScene" uid="uid://25d7sdin10uk" path="res://Assets/City Pack.undefined-zip/Pizza Corner/PizzaCorner.fbx" id="4_or6n4"]
+[ext_resource type="PackedScene" uid="uid://btsk5abo1k2c4" path="res://Assets/City Pack.undefined-zip/Building Green/BuildingGreen.fbx" id="5_p7rx0"]
+[ext_resource type="PackedScene" uid="uid://djhrphdkhp61c" path="res://Assets/City Pack.undefined-zip/Building Red Corner/buildingRedCorner.fbx" id="6_iysjp"]
+[ext_resource type="ArrayMesh" uid="uid://dshwecj7u8aw5" path="res://Assets/City Pack.undefined-zip/Bus Stop/BusStop.obj" id="7_iysjp"]
+[ext_resource type="PackedScene" uid="uid://bou4m88qtcap1" path="res://Assets/City Pack.undefined-zip/Bus stop sign/bussy.fbx" id="8_hdt71"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnrmd"]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.93262035, 0.8928414, 0.83214045, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_or6n4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p7rx0"]
+albedo_color = Color(0.103743516, 0.10374353, 0.103743516, 1)
+
+[node name="Level" type="Node3D" unique_id=615120950]
+
+[node name="Roads" type="Node3D" parent="." unique_id=508331921]
+
+[node name="Node3D" type="Node3D" parent="Roads" unique_id=1785613590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, 0)
+
+[node name="MidRoad" type="MeshInstance3D" parent="Roads/Node3D" unique_id=500170235]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad" type="MeshInstance3D" parent="Roads/Node3D" unique_id=875701091]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.9443202, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="RightRoad" type="MeshInstance3D" parent="Roads/Node3D" unique_id=834351974]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9466808, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad1" type="MeshInstance3D" parent="Roads/Node3D" unique_id=777752551]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad1" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1884034755]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad2" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1134470635]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad2" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1471478794]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad2" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1666277690]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad3" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1387410706]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad3" type="MeshInstance3D" parent="Roads/Node3D" unique_id=60812355]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad3" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1964364579]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad4" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1990045716]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad4" type="MeshInstance3D" parent="Roads/Node3D" unique_id=462912996]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad4" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1098347917]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad5" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1029175855]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad5" type="MeshInstance3D" parent="Roads/Node3D" unique_id=629341862]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad5" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1388475614]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad6" type="MeshInstance3D" parent="Roads/Node3D" unique_id=321954812]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad6" type="MeshInstance3D" parent="Roads/Node3D" unique_id=776490076]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad6" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1868992142]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad7" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1327885752]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad7" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1959389978]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad7" type="MeshInstance3D" parent="Roads/Node3D" unique_id=1984485163]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad8" type="MeshInstance3D" parent="Roads/Node3D" unique_id=580059178]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="Node3D2" type="Node3D" parent="Roads" unique_id=906105547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, 6.334194)
+
+[node name="MidRoad" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=910064967]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=959129829]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.9443202, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="RightRoad" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=34461267]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9466808, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad1" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1543983837]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad1" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1297581164]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad2" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1586161001]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad8" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=736845019]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad8" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1287133052]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad9" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1053583143]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad9" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=2024268577]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad9" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=592907087]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad10" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=573301848]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad10" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=351610158]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad10" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=556737312]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad11" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=2112136190]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad2" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1997934192]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad2" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1083064101]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad3" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1088397702]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad3" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1339322323]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad3" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1372961232]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad4" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1406146654]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad4" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1159756628]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad4" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1769028002]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad5" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=810629349]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad5" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1384571548]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad5" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1567883801]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad6" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=975883493]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad6" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=496057593]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad6" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=622952795]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad7" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1325241196]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad7" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1021693404]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad7" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1253672970]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad8" type="MeshInstance3D" parent="Roads/Node3D2" unique_id=1610250017]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="Node3D3" type="Node3D" parent="Roads" unique_id=1116576225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, 15.334194)
+
+[node name="MidRoad" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1674952844]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1114793013]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.9443202, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="RightRoad" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=778170484]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9466808, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad1" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1178992596]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad1" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=322057200]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad2" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=875361657]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad8" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=843946506]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad8" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1395093158]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad9" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1815139694]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad9" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=2131611547]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad9" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1385084278]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad10" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=81191320]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad10" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=429096375]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad10" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1252208662]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad11" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=2131950108]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad2" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=795892348]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad2" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1470712150]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad3" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=354662298]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad3" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1201936929]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad3" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1851902154]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad4" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1375354549]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad4" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=569797838]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad4" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=520261988]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad5" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1384380248]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad5" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1550265726]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad5" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=968689349]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad6" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1247363869]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad6" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1055791232]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad6" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1652803825]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad7" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=32530257]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad7" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1881266958]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad7" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=1783994290]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad8" type="MeshInstance3D" parent="Roads/Node3D3" unique_id=131006478]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="Node3D4" type="Node3D" parent="Roads" unique_id=1514285382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, 24.334194)
+
+[node name="MidRoad" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=750334097]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=168447247]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.9443202, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="RightRoad" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=921187388]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9466808, 0, 0)
+mesh = ExtResource("1_3bu56")
+
+[node name="LeftRoad1" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1925884454]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad1" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=391813302]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad2" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1182654600]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -0.9507272)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad8" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=442053360]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad8" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=27864359]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad9" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=537471717]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 0.9475961)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad9" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1720164432]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad9" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=2032354090]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad10" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=855730357]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 1.8894949)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad10" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=504341846]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad10" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=56745544]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad11" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=14084066]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, 2.824132)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad2" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=132150614]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad2" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1642720319]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad3" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=677917405]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad3" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=786216937]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad3" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=849599550]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad4" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=667538087]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -1.8973482)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad4" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=585081485]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad4" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1402486251]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad5" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1754103120]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -2.835757)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad5" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1870994305]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad5" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=84255271]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad6" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1445458054]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -3.7840476)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad6" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1356015469]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad6" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1644640122]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad7" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1857143525]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -4.7205544)
+mesh = ExtResource("2_jnrmd")
+
+[node name="LeftRoad7" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=178682200]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, -0.94662094, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="MidRoad7" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=1814177168]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.004105568, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="RightROad8" type="MeshInstance3D" parent="Roads/Node3D4" unique_id=452123098]
+transform = Transform3D(47.54, 0, 0, 0, -2.0780394e-06, 47.54, 0, -47.54, -2.0780394e-06, 0.9384084, 0, -5.6521454)
+mesh = ExtResource("2_jnrmd")
+
+[node name="Buildings" type="Node3D" parent="." unique_id=410972410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, 0)
+
+[node name="Building3_Big" parent="Buildings" unique_id=1153770644 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, -0.38, 0, 0.38, 0, 0.38, 0, -1.6610327e-08, 3, 0, 8)
+
+[node name="Building3_Big2" parent="Buildings" unique_id=579806146 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, 0.38, 0, 0.38, 0, -0.38, 0, -1.6610327e-08, -3, 0, 3)
+
+[node name="Building3_Big4" parent="Buildings" unique_id=1998151533 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, 0.38, 0, 0.38, 0, -0.38, 0, -1.6610327e-08, -3, 0, -5)
+
+[node name="Building3_Big3" parent="Buildings" unique_id=719707498 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, -0.38, 0, 0.38, 0, 0.38, 0, -1.6610327e-08, 3, 0, -2)
+
+[node name="PizzaCorner" parent="Buildings" unique_id=144219630 instance=ExtResource("4_or6n4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 6)
+
+[node name="BuildingGreen" parent="Buildings" unique_id=1336774987 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.0562558, 0, 4.2322288)
+
+[node name="buildingRedCorner" parent="Buildings" unique_id=1665657194 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.9949284, 0, 2.4100397)
+
+[node name="Building3_Big7" parent="Buildings" unique_id=1770328371 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, -0.38, 0, 0.38, 0, 0.38, 0, -1.6610327e-08, 3, 0, 17)
+
+[node name="PizzaCorner7" parent="Buildings" unique_id=480832797 instance=ExtResource("4_or6n4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 15)
+
+[node name="BuildingGreen7" parent="Buildings" unique_id=488318749 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.0562558, 0, 13.232229)
+
+[node name="buildingRedCorner7" parent="Buildings" unique_id=348803629 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.9949284, 0, 11.41004)
+
+[node name="Building3_Big8" parent="Buildings" unique_id=1104704014 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, -0.38, 0, 0.38, 0, 0.38, 0, -1.6610327e-08, 3, 0, 25)
+
+[node name="PizzaCorner8" parent="Buildings" unique_id=962376895 instance=ExtResource("4_or6n4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, 23)
+
+[node name="BuildingGreen8" parent="Buildings" unique_id=1386525704 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.0562558, 0, 21.23223)
+
+[node name="buildingRedCorner8" parent="Buildings" unique_id=1982797939 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.9949284, 0, 19.41004)
+
+[node name="PizzaCorner2" parent="Buildings" unique_id=1595012033 instance=ExtResource("4_or6n4")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, 0, -4)
+
+[node name="BuildingGreen2" parent="Buildings" unique_id=649404305 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.0562558, 0, -5.7677712)
+
+[node name="buildingRedCorner2" parent="Buildings" unique_id=982934690 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.9949284, 0, -7.58996)
+
+[node name="PizzaCorner3" parent="Buildings" unique_id=1965341435 instance=ExtResource("4_or6n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1)
+
+[node name="BuildingGreen3" parent="Buildings" unique_id=1239714364 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.0580292, 0, -0.76777124)
+
+[node name="buildingRedCorner3" parent="Buildings" unique_id=202361136 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.0050716, 0, -2.5411916)
+
+[node name="PizzaCorner4" parent="Buildings" unique_id=705601655 instance=ExtResource("4_or6n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 8)
+
+[node name="BuildingGreen4" parent="Buildings" unique_id=1561916064 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.0580292, 0, 6.2322288)
+
+[node name="buildingRedCorner4" parent="Buildings" unique_id=1998573721 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.0050716, 0, 4.4588084)
+
+[node name="Building3_Big5" parent="Buildings" unique_id=522975241 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, 0.38, 0, 0.38, 0, -0.38, 0, -1.6610327e-08, -3, 0, 10)
+
+[node name="PizzaCorner5" parent="Buildings" unique_id=812645378 instance=ExtResource("4_or6n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 15)
+
+[node name="BuildingGreen5" parent="Buildings" unique_id=1624049978 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.0580292, 0, 13.232229)
+
+[node name="buildingRedCorner5" parent="Buildings" unique_id=1250615061 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.0050716, 0, 11.458809)
+
+[node name="Building3_Big6" parent="Buildings" unique_id=480563832 instance=ExtResource("3_jnrmd")]
+transform = Transform3D(-1.6610327e-08, 0, 0.38, 0, 0.38, 0, -0.38, 0, -1.6610327e-08, -3, 0, 18)
+
+[node name="PizzaCorner6" parent="Buildings" unique_id=97958340 instance=ExtResource("4_or6n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 23)
+
+[node name="BuildingGreen6" parent="Buildings" unique_id=882360345 instance=ExtResource("5_p7rx0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.0580292, 0, 21.23223)
+
+[node name="buildingRedCorner6" parent="Buildings" unique_id=2009722340 instance=ExtResource("6_iysjp")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.0050716, 0, 19.458809)
+
+[node name="Pavement" type="MeshInstance3D" parent="." unique_id=20628913]
+transform = Transform3D(2.4, 0, 0, 0, 1, 0, 0, 0, 24.225002, 0, 0, 3)
+material_override = SubResource("StandardMaterial3D_jnrmd")
+mesh = SubResource("PlaneMesh_or6n4")
+
+[node name="Under Pavement" type="MeshInstance3D" parent="." unique_id=515466812]
+transform = Transform3D(6.4800005, 0, 0, 0, 1, 0, 0, 0, 25.194, 0, -0.088032484, 3)
+material_override = SubResource("StandardMaterial3D_p7rx0")
+mesh = SubResource("PlaneMesh_or6n4")
+
+[node name="Props" type="Node3D" parent="." unique_id=547762958]
+
+[node name="BusStop" type="MeshInstance3D" parent="Props" unique_id=1609854244]
+transform = Transform3D(-8.7422775e-10, 0, 0.02, 0, 0.02, 0, -0.02, 0, -8.7422775e-10, -1.5428602, 0.3587047, 2)
+mesh = ExtResource("7_iysjp")
+
+[node name="bussy" parent="Props" unique_id=238295646 instance=ExtResource("8_hdt71")]
+transform = Transform3D(0.049809735, 0, 0.0043577775, 0, 0.05, 0, -0.0043577775, 0, 0.049809735, 1.528146, 0, 3)
