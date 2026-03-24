@@ -1,10 +1,28 @@
 [gd_scene format=3 uid="uid://2hrfooq17ep1"]
 
 [ext_resource type="FontFile" uid="uid://dpcte75snv63i" path="res://UI/Fonts/Roboto_Condensed-Bold.ttf" id="1_3i1b0"]
+[ext_resource type="Script" uid="uid://i8icjwdofbgl" path="res://Scene/ui.gd" id="1_bpjw8"]
+[ext_resource type="Texture2D" uid="uid://7w48yjugv2lw" path="res://UI/direction_right.png" id="3_lfpiq"]
+[ext_resource type="Texture2D" uid="uid://daxnqpnfxaqiq" path="res://UI/direction_left.png" id="4_urowa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_urowa"]
+font = ExtResource("1_3i1b0")
+font_size = 48
 
 [sub_resource type="LabelSettings" id="LabelSettings_6jcrg"]
 font = ExtResource("1_3i1b0")
 font_size = 36
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfpiq"]
+size = Vector2(150.415, 147.155)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3i1b0"]
+font = ExtResource("1_3i1b0")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_bpjw8"]
+font = ExtResource("1_3i1b0")
+font_size = 32
 
 [node name="UI" type="Control" unique_id=933190388]
 layout_mode = 3
@@ -13,33 +31,98 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bpjw8")
 
-[node name="Question" type="Label" parent="." unique_id=441315693]
-layout_mode = 0
-offset_right = 720.0
-offset_bottom = 432.0
+[node name="End Screen" type="Label" parent="." unique_id=1488977081]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -362.0
+offset_top = -144.5
+offset_right = 362.0
+offset_bottom = 144.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game Has Ended 
+Your Scoe is"
+label_settings = SubResource("LabelSettings_urowa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OnGame" type="Control" parent="." unique_id=1152489985]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Question" type="Label" parent="OnGame" unique_id=441315693]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 57.0
+offset_right = 700.0
+offset_bottom = 389.0
+grow_horizontal = 2
 text = "Is It True Or False?"
 label_settings = SubResource("LabelSettings_6jcrg")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Guides True" type="Label" parent="." unique_id=545600339]
+[node name="Guides True" type="Label" parent="OnGame" unique_id=545600339]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 625.0
 offset_right = 726.0
 offset_bottom = 735.0
-text = "                      True"
+text = "        True"
 label_settings = SubResource("LabelSettings_6jcrg")
 vertical_alignment = 1
 
-[node name="Guides False" type="Label" parent="." unique_id=1683426927]
+[node name="Guides False" type="Label" parent="OnGame" unique_id=1683426927]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 625.0
 offset_right = 726.0
 offset_bottom = 735.0
-text = "False                         "
+text = "False          "
 label_settings = SubResource("LabelSettings_6jcrg")
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="Right" type="TouchScreenButton" parent="OnGame" unique_id=2091254235]
+position = Vector2(543, 1030)
+texture_normal = ExtResource("3_lfpiq")
+shape = SubResource("RectangleShape2D_lfpiq")
+action = "Right"
+
+[node name="Left" type="TouchScreenButton" parent="OnGame" unique_id=533377874]
+position = Vector2(83.87, 1030)
+texture_normal = ExtResource("4_urowa")
+shape = SubResource("RectangleShape2D_lfpiq")
+action = "Left"
+
+[node name="Time" type="Label" parent="OnGame" unique_id=1736483454]
+layout_mode = 0
+offset_top = 336.0
+offset_right = 719.0
+offset_bottom = 542.0
+text = "0"
+label_settings = SubResource("LabelSettings_3i1b0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UITimer" type="Timer" parent="OnGame" unique_id=1388643058]
+
+[node name="Score" type="Label" parent="OnGame" unique_id=272564165]
+layout_mode = 0
+offset_right = 270.0
+offset_bottom = 79.0
+text = "Score : "
+label_settings = SubResource("LabelSettings_bpjw8")
+
+[connection signal="pressed" from="OnGame/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="OnGame/Left" to="." method="_on_left_pressed"]

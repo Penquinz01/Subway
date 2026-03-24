@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vhon36j7wx7x"
 path.s3tc="res://.godot/imported/1387 Van.png-48dfcb90ee513d3151f299f9910292cc.s3tc.ctex"
+path.etc2="res://.godot/imported/1387 Van.png-48dfcb90ee513d3151f299f9910292cc.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/City Pack.undefined-zip/Van/1387 Van.png"
-dest_files=["res://.godot/imported/1387 Van.png-48dfcb90ee513d3151f299f9910292cc.s3tc.ctex"]
+dest_files=["res://.godot/imported/1387 Van.png-48dfcb90ee513d3151f299f9910292cc.s3tc.ctex", "res://.godot/imported/1387 Van.png-48dfcb90ee513d3151f299f9910292cc.etc2.ctex"]
 
 [params]
 

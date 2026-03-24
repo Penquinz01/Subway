@@ -3,12 +3,21 @@
 [ext_resource type="PackedScene" uid="uid://dqdd231bm7dtc" path="res://Scene/Player.tscn" id="1_1oj5k"]
 [ext_resource type="Environment" uid="uid://dopwlvgq1tjd7" path="res://Environment.tres" id="1_htkpn"]
 [ext_resource type="PackedScene" uid="uid://cq6ou6ynslnb8" path="res://Scene/level.tscn" id="2_vh4eo"]
+[ext_resource type="Script" uid="uid://1kc478ndlxii" path="res://Scripts/game_manager.gd" id="3_qy5om"]
 [ext_resource type="PackedScene" uid="uid://2hrfooq17ep1" path="res://Scene/ui.tscn" id="4_1btii"]
+[ext_resource type="Script" uid="uid://dtofaguugjn4x" path="res://Scripts/spawner.gd" id="4_44mwd"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vh4eo"]
 dof_blur_amount = 0.28
 
 [sub_resource type="Compositor" id="Compositor_vh4eo"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qy5om"]
+dof_blur_far_enabled = true
+dof_blur_far_distance = 5.0
+dof_blur_far_transition = 20.0
+dof_blur_near_enabled = true
+dof_blur_amount = 0.18
 
 [node name="Main Game" type="Node3D" unique_id=654691836]
 
@@ -18,14 +27,16 @@ camera_attributes = SubResource("CameraAttributesPractical_vh4eo")
 compositor = SubResource("Compositor_vh4eo")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=133511448]
-transform = Transform3D(0.9999757, 0.004716471, -0.005147125, -0.0034906298, 0.97628784, 0.21644859, 0.006045949, -0.21642536, 0.97628045, 0.016305385, 2.528096, 18.256184)
+transform = Transform3D(0.9999757, 0.004716473, -0.005147127, -0.00092114345, 0.81997, 0.5724058, 0.0069202264, -0.57238716, 0.81995434, 0.016305385, 3.2869956, 18.14084)
 environment = ExtResource("1_htkpn")
+attributes = SubResource("CameraAttributesPractical_qy5om")
+v_offset = 1.0
 current = true
-fov = 90.1
+fov = 80.0
 far = 45.03
 
-[node name="CharacterBody3D" parent="." unique_id=489180854 node_paths=PackedStringArray("leftPosition", "midPosition", "rightPosition") instance=ExtResource("1_1oj5k")]
-transform = Transform3D(-0.57, 3.303947e-09, -8.6004164e-08, 0, 0.56957984, 0.021881051, 8.606761e-08, 0.021881051, -0.56957984, 0.04405558, 0.10564846, 14.426041)
+[node name="Player" parent="." unique_id=489180854 node_paths=PackedStringArray("leftPosition", "midPosition", "rightPosition") instance=ExtResource("1_1oj5k")]
+transform = Transform3D(-0.57, 3.303947e-09, -8.6004164e-08, 0, 0.56957984, 0.021881051, 8.606761e-08, 0.021881051, -0.56957984, 0.04405558, 0.10564846, 15.7117195)
 leftPosition = NodePath("../Left Position")
 midPosition = NodePath("../MidPosition")
 rightPosition = NodePath("../RightPosition")
@@ -50,10 +61,37 @@ light_specular = 0.0
 light_bake_mode = 1
 shadow_enabled = true
 
-[node name="Level" parent="." unique_id=1456934030 instance=ExtResource("2_vh4eo")]
-transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
-
 [node name="GameManager" type="Node3D" parent="." unique_id=473153039]
 transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
+script = ExtResource("3_qy5om")
+question_timer_wait_time = 10.0
 
 [node name="UI" parent="." unique_id=933190388 instance=ExtResource("4_1btii")]
+
+[node name="Spawner" type="Node3D" parent="." unique_id=1239986525]
+transform = Transform3D(1.84, 0, 0, 0, 1.84, 0, 0, 0, 1.84, 0, 0, -28)
+script = ExtResource("4_44mwd")
+levelScene = ExtResource("2_vh4eo")
+spawn_time = 5.0
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=714630450]
+autostart = true
+
+[node name="QuesionTimer" type="Timer" parent="." unique_id=1256137884]
+wait_time = 10.0
+autostart = true
+
+[node name="FreezeTimer" type="Timer" parent="." unique_id=1128894334]
+wait_time = 3.0
+
+[connection signal="game_ended" from="GameManager" to="Player" method="_on_game_ended"]
+[connection signal="game_ended" from="GameManager" to="UI" method="_on_game_ended"]
+[connection signal="on_new_score" from="GameManager" to="UI" method="_on_game_manager_on_new_score"]
+[connection signal="update_ui_time" from="GameManager" to="UI" method="change_timer"]
+[connection signal="leftclicked" from="UI" to="Player" method="_on_ui_leftclicked"]
+[connection signal="rightclicked" from="UI" to="Player" method="_on_ui_rightclicked"]
+[connection signal="timeout" from="SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="QuesionTimer" to="Player" method="_on_quesion_timer_timeout"]
+[connection signal="timeout" from="QuesionTimer" to="GameManager" method="_on_quesion_timer_timeout"]
+[connection signal="timeout" from="FreezeTimer" to="Player" method="_on_freeze_timer_timeout"]
+[connection signal="timeout" from="FreezeTimer" to="GameManager" method="_on_freeze_timer_timeout"]

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://tr8ogv0xgvq2"
 path.s3tc="res://.godot/imported/_0004_AllSkyFree_Screen_06.jpg-475975c9c50189dcec75a98871c87a25.s3tc.ctex"
+path.etc2="res://.godot/imported/_0004_AllSkyFree_Screen_06.jpg-475975c9c50189dcec75a98871c87a25.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/AllSkyFree_Godot-10e858fef0a9c5fa071de8bc191c3b4bef00edda/Screenshots/_0004_AllSkyFree_Screen_06.jpg"
-dest_files=["res://.godot/imported/_0004_AllSkyFree_Screen_06.jpg-475975c9c50189dcec75a98871c87a25.s3tc.ctex"]
+dest_files=["res://.godot/imported/_0004_AllSkyFree_Screen_06.jpg-475975c9c50189dcec75a98871c87a25.s3tc.ctex", "res://.godot/imported/_0004_AllSkyFree_Screen_06.jpg-475975c9c50189dcec75a98871c87a25.etc2.ctex"]
 
 [params]
 

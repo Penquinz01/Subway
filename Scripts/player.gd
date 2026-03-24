@@ -10,18 +10,23 @@ const JUMP_VELOCITY = 4.5
 @export var offset:float
 @onready var animPlayer:= $Casual_Hoodie/AnimationPlayer
 var current_position:Vector3
+var canMove:bool = true
+
+
+var dir:int
 
 func _ready() -> void:
 	current_position = midPosition.position
 	position = current_position
-	animPlayer.play("CharacterArmature|Idle")
+	animPlayer.play("CharacterArmature|Run")
 
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	if !canMove:
+		return
+	move();
 	
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+func move()->void:
 	var input_dir_left := Input.is_action_just_pressed("Left");
 	var input_dir_right := Input.is_action_just_pressed("Right");
 	
@@ -31,8 +36,6 @@ func _physics_process(delta: float) -> void:
 	
 	var input_dir := right - left
 	
-	print(input_dir)
-	var dir:int;
 	if(input_dir<0):
 		dir = -1
 	elif input_dir > 0:
@@ -48,7 +51,6 @@ func _physics_process(delta: float) -> void:
 			from_rightPos(dir)
 		_:
 			print("Nu uh")
-	print(current_position)
 	position = current_position + Vector3.UP * offset
 
 #region NextPositionThings
@@ -85,3 +87,37 @@ func from_rightPos(dir:int)->void:
 		_:
 			print("Idk How that happened,Sorry")
 #endregion
+
+
+func resetPos()-> void :
+	current_position = midPosition.position
+	position = current_position
+
+func getCurrentPos()->void:
+	match current_position:
+		leftPosition.position:
+			GameManager.check_answer(GameManager.Position.Left)
+		rightPosition.position:
+			GameManager.check_answer(GameManager.Position.Right)
+		midPosition.position:
+			GameManager.check_answer(GameManager.Position.Center)
+
+
+func _on_freeze_timer_timeout() -> void:
+	canMove = true
+	resetPos()
+
+
+func _on_quesion_timer_timeout() -> void:
+	canMove = false
+	dir = 0
+
+
+func _on_ui_leftclicked() -> void:
+	dir = -1
+
+func _on_ui_rightclicked() -> void:
+	dir = 1
+
+func _on_game_ended()->void:
+	canMove = false

@@ -16,7 +16,7 @@ transform = Transform3D(0.945, 0, 0, 0, 0.945, 0, 0, 0, 0.945, -0.014358997, -0.
 
 [node name="Skeleton3D" parent="Casual_Hoodie/CharacterArmature" parent_id_path=PackedInt32Array(657609899, 1757759728) index="0" unique_id=98425297]
 bones/1/position = Vector3(4.5321945e-06, 0.008289528, -0.00045605682)
-bones/1/rotation = Quaternion(0, 0.2355304, 0, 0.97186697)
+bones/1/rotation = Quaternion(0, 0.23553042, 0, 0.971867)
 bones/2/position = Vector3(-7.970076e-06, 0.00028694916, 0.00033074923)
 bones/2/rotation = Quaternion(-0.06942943, -2.6701636e-07, -3.090872e-08, 0.99758685)
 bones/2/scale = Vector3(1, 1, 1)
@@ -30,10 +30,10 @@ bones/5/position = Vector3(-4.5398461e-13, 0.0021629164, 2.981566e-11)
 bones/5/rotation = Quaternion(0.003636485, 2.2555623e-10, -2.1391457e-09, 0.9999934)
 bones/5/scale = Vector3(1, 0.9999999, 0.9999999)
 bones/6/position = Vector3(1.9498331e-13, 0.0013325068, -1.5886624e-11)
-bones/6/rotation = Quaternion(-0.009471056, 6.77684e-07, -8.877061e-10, 0.99995524)
+bones/6/rotation = Quaternion(0.03068587, 1.424845e-06, -5.1683675e-09, 0.9995291)
 bones/6/scale = Vector3(1, 1.0000001, 1)
 bones/7/position = Vector3(-3.7756408e-13, 0.0007672866, 4.768372e-11)
-bones/7/rotation = Quaternion(-0.024510862, -0.00027539238, 0.00012030277, 0.9996996)
+bones/7/rotation = Quaternion(-0.024510872, -0.0002753924, 0.00012030279, 0.99969953)
 bones/7/scale = Vector3(0.99999994, 1, 0.99999994)
 bones/9/position = Vector3(0.0009873543, 0.0002901772, 0.0002127568)
 bones/9/rotation = Quaternion(0.45619935, 0.8402315, 0.106907144, -0.27288118)
@@ -108,7 +108,7 @@ bones/37/position = Vector3(-0.0009805992, 0.00029017738, 0.00021275785)
 bones/37/rotation = Quaternion(-0.45619932, 0.84023166, 0.10690751, 0.27288067)
 bones/37/scale = Vector3(1, 1.0000001, 1.0000001)
 bones/38/position = Vector3(-1.3456739e-09, 0.0006563344, 1.2382418e-09)
-bones/38/rotation = Quaternion(-0.6268727, -0.30753386, -0.43937653, 0.5651565)
+bones/38/rotation = Quaternion(-0.62687266, -0.30753386, -0.43937653, 0.5651565)
 bones/38/scale = Vector3(0.9999998, 1, 1)
 bones/39/position = Vector3(-3.7468265e-10, 0.00181908, 8.13192e-11)
 bones/39/rotation = Quaternion(-0.20576295, -0.19378635, 0.3239576, 0.9028621)
@@ -185,7 +185,7 @@ bones/68/scale = Vector3(0.9999999, 0.9999996, 0.9999732)
 bones/69/position = Vector3(6.8378574e-11, 0.0043297918, -1.078191e-10)
 bones/69/rotation = Quaternion(0.16754256, -0.68697107, 0.16754243, 0.68697155)
 bones/69/scale = Vector3(1.0000001, 1, 0.99999994)
-bones/71/rotation = Quaternion(0.6144137, 0.34804383, -0.34615323, 0.6176888)
+bones/71/rotation = Quaternion(0.6144136, 0.3480438, -0.34615317, 0.6176887)
 bones/71/scale = Vector3(1, 1, 1)
 bones/73/scale = Vector3(1, 0.99999994, 0.99999994)
 bones/75/rotation = Quaternion(0.7040329, 0.040968824, -0.04078968, 0.7078103)
@@ -194,6 +194,6 @@ bones/77/rotation = Quaternion(-0.0026737682, -3.4093733e-05, 9.115906e-08, 0.99
 bones/77/scale = Vector3(1, 0.99999994, 0.99999994)
 
 [node name="AnimationPlayer" parent="Casual_Hoodie" index="1" unique_id=747891818]
-speed_scale = 2.72
+speed_scale = 1.5
 
 [editable path="Casual_Hoodie"]

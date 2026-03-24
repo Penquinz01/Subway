@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b21axjnvy5dm"
 path.s3tc="res://.godot/imported/Billboard Texture(Without inscriptions).png-34bfc064c14df8cc1805b9f44df042f0.s3tc.ctex"
+path.etc2="res://.godot/imported/Billboard Texture(Without inscriptions).png-34bfc064c14df8cc1805b9f44df042f0.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/City Pack.undefined-zip/Billboard/Billboard Texture(Without inscriptions).png"
-dest_files=["res://.godot/imported/Billboard Texture(Without inscriptions).png-34bfc064c14df8cc1805b9f44df042f0.s3tc.ctex"]
+dest_files=["res://.godot/imported/Billboard Texture(Without inscriptions).png-34bfc064c14df8cc1805b9f44df042f0.s3tc.ctex", "res://.godot/imported/Billboard Texture(Without inscriptions).png-34bfc064c14df8cc1805b9f44df042f0.etc2.ctex"]
 
 [params]
 
