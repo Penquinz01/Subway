@@ -24,6 +24,8 @@ var is_game_ended:bool= false
 signal on_new_score(score:int)
 signal update_ui_time(time:int)
 signal game_ended
+signal vehicle_spawn(answer_for_the_question:bool)
+signal vehicle_stop
 
 func _ready() -> void:
 	update_ui_time.emit(question_timer_wait_time)
@@ -47,6 +49,7 @@ func _on_freeze_timer_timeout() -> void:
 	freeze_timer.stop()
 	question_timer.start(question_timer_wait_time)
 	update_ui_time.emit(question_timer_wait_time)
+	vehicle_stop.emit()
 
 func _on_quesion_timer_timeout() -> void:
 	player.getCurrentPos()
@@ -59,6 +62,8 @@ func _on_quesion_timer_timeout() -> void:
 		game_ended.emit()
 		to_leaderboard()
 		print("Game Ended")
+		return
+	vehicle_spawn.emit(answer)
 
 func to_leaderboard():
 	#do whatever is needed here

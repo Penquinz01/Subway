@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://1kc478ndlxii" path="res://Scripts/game_manager.gd" id="3_qy5om"]
 [ext_resource type="PackedScene" uid="uid://2hrfooq17ep1" path="res://Scene/ui.tscn" id="4_1btii"]
 [ext_resource type="Script" uid="uid://dtofaguugjn4x" path="res://Scripts/spawner.gd" id="4_44mwd"]
+[ext_resource type="PackedScene" uid="uid://c23gtfw0832tl" path="res://Scene/vehicle.tscn" id="7_ed23l"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_vh4eo"]
 dof_blur_amount = 0.28
@@ -61,19 +62,6 @@ light_specular = 0.0
 light_bake_mode = 1
 shadow_enabled = true
 
-[node name="GameManager" type="Node3D" parent="." unique_id=473153039]
-transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
-script = ExtResource("3_qy5om")
-question_timer_wait_time = 10.0
-
-[node name="UI" parent="." unique_id=933190388 instance=ExtResource("4_1btii")]
-
-[node name="Spawner" type="Node3D" parent="." unique_id=1239986525]
-transform = Transform3D(1.84, 0, 0, 0, 1.84, 0, 0, 0, 1.84, 0, 0, -28)
-script = ExtResource("4_44mwd")
-levelScene = ExtResource("2_vh4eo")
-spawn_time = 5.0
-
 [node name="SpawnTimer" type="Timer" parent="." unique_id=714630450]
 autostart = true
 
@@ -84,14 +72,52 @@ autostart = true
 [node name="FreezeTimer" type="Timer" parent="." unique_id=1128894334]
 wait_time = 3.0
 
-[connection signal="game_ended" from="GameManager" to="Player" method="_on_game_ended"]
-[connection signal="game_ended" from="GameManager" to="UI" method="_on_game_ended"]
-[connection signal="on_new_score" from="GameManager" to="UI" method="_on_game_manager_on_new_score"]
-[connection signal="update_ui_time" from="GameManager" to="UI" method="change_timer"]
-[connection signal="leftclicked" from="UI" to="Player" method="_on_ui_leftclicked"]
-[connection signal="rightclicked" from="UI" to="Player" method="_on_ui_rightclicked"]
+[node name="GameManager" type="Node3D" parent="." unique_id=473153039]
+transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
+script = ExtResource("3_qy5om")
+question_timer_wait_time = 10.0
+
+[node name="UI" parent="." unique_id=933190388 instance=ExtResource("4_1btii")]
+
+[node name="Spawner" type="Node3D" parent="." unique_id=1239986525 node_paths=PackedStringArray("vehicle_left", "vehicle_mid", "vehicle_right")]
+transform = Transform3D(1.84, 0, 0, 0, 1.84, 0, 0, 0, 1.84, 0, 0, -28)
+script = ExtResource("4_44mwd")
+levelScene = ExtResource("2_vh4eo")
+spawn_time = 8.0
+vehicle_left = NodePath("../Bus Spawn Locations/Left Position/VehicleLeft")
+vehicle_mid = NodePath("../Bus Spawn Locations/MidPosition/VehicleMid")
+vehicle_right = NodePath("../Bus Spawn Locations/RightPosition/VehicleRight")
+
+[node name="Level" parent="Spawner" unique_id=615120950 instance=ExtResource("2_vh4eo")]
+
+[node name="Bus Spawn Locations" type="Node3D" parent="." unique_id=1921365166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27)
+
+[node name="Left Position" type="Node3D" parent="Bus Spawn Locations" unique_id=1106683190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.733, 0.06, -4)
+
+[node name="VehicleLeft" parent="Bus Spawn Locations/Left Position" unique_id=508520872 instance=ExtResource("7_ed23l")]
+
+[node name="MidPosition" type="Node3D" parent="Bus Spawn Locations" unique_id=571000536]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06, -4)
+
+[node name="VehicleMid" parent="Bus Spawn Locations/MidPosition" unique_id=138151422 instance=ExtResource("7_ed23l")]
+
+[node name="RightPosition" type="Node3D" parent="Bus Spawn Locations" unique_id=434464278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.706, 0.06, -4)
+
+[node name="VehicleRight" parent="Bus Spawn Locations/RightPosition" unique_id=994180598 instance=ExtResource("7_ed23l")]
+
 [connection signal="timeout" from="SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="QuesionTimer" to="Player" method="_on_quesion_timer_timeout"]
 [connection signal="timeout" from="QuesionTimer" to="GameManager" method="_on_quesion_timer_timeout"]
 [connection signal="timeout" from="FreezeTimer" to="Player" method="_on_freeze_timer_timeout"]
 [connection signal="timeout" from="FreezeTimer" to="GameManager" method="_on_freeze_timer_timeout"]
+[connection signal="game_ended" from="GameManager" to="Player" method="_on_game_ended"]
+[connection signal="game_ended" from="GameManager" to="UI" method="_on_game_ended"]
+[connection signal="on_new_score" from="GameManager" to="UI" method="_on_game_manager_on_new_score"]
+[connection signal="update_ui_time" from="GameManager" to="UI" method="change_timer"]
+[connection signal="vehicle_spawn" from="GameManager" to="Spawner" method="_on_vehicle_spawn"]
+[connection signal="vehicle_stop" from="GameManager" to="Spawner" method="_on_vehicle_stop"]
+[connection signal="leftclicked" from="UI" to="Player" method="_on_ui_leftclicked"]
+[connection signal="rightclicked" from="UI" to="Player" method="_on_ui_rightclicked"]

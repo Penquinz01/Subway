@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c23gtfw0832tl"]
+
+[ext_resource type="Script" uid="uid://ddl5r4uqw7t7l" path="res://Scripts/vehicle.gd" id="1_1jyw8"]
+[ext_resource type="ArrayMesh" uid="uid://cr5qjoaig8k7l" path="res://Assets/City Pack.undefined-zip/Bus/1376 Bus.obj" id="1_ldmdf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ldmdf"]
+size = Vector3(2.2409668, 1.4992676, 5)
+
+[node name="Vehicle" type="RigidBody3D" unique_id=508520872]
+collision_layer = 2
+collision_mask = 2
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+gravity_scale = 0.0
+script = ExtResource("1_1jyw8")
+vehicle_force = 50.0
+
+[node name="1376Bus" type="MeshInstance3D" parent="." unique_id=1890277000]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0, 0, 0)
+mesh = ExtResource("1_ldmdf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1370993857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7799072, 0)
+shape = SubResource("BoxShape3D_ldmdf")
+debug_color = Color(0.9364755, 0.25367245, 0, 0.41960785)
