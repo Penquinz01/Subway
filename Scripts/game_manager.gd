@@ -93,4 +93,6 @@ func game_over():
 	#do whatever is needed here
 	print("Doing leaderboard update")
 	if OS.get_name() == "HTML5	":
+		print("HTML it is")
 		JavaScriptBridge.eval("window.updateScore(" + str(score) + ")")
+
