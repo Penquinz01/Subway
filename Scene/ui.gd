@@ -14,7 +14,7 @@ var current_score :int = 0
 
 func _ready() -> void:
 
-	ui_timer.start(10)
+	ui_timer.start(15)
 	score_label.text = "Score : 0"
 	end_screen.set_process(false)
 	end_screen.hide()

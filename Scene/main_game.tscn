@@ -106,7 +106,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.706, 0.06, -4)
 [node name="GameManager" type="Node3D" parent="." unique_id=473153039]
 transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
 script = ExtResource("3_qy5om")
-question_timer_wait_time = 5.0
+question_timer_wait_time = 15.0
 
 [connection signal="timeout" from="SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="QuesionTimer" to="Player" method="_on_quesion_timer_timeout"]

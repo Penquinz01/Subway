@@ -61,6 +61,8 @@ func check_answer(pos:Position)->bool:
 
 
 func _on_freeze_timer_timeout() -> void:
+	if is_game_ended:
+		return
 	freeze_timer.stop()
 	question_timer.start(question_timer_wait_time)
 	update_ui_time.emit(question_timer_wait_time)
@@ -68,6 +70,8 @@ func _on_freeze_timer_timeout() -> void:
 	vehicle_stop.emit()
 
 func _on_quesion_timer_timeout() -> void:
+	if is_game_ended:
+		return
 	vehicle_spawn.emit(answer[currentQuestion])
 	player.getCurrentPos()
 	print(currentQuestion)
