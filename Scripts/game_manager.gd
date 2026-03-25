@@ -11,18 +11,18 @@ enum Position{
 @onready var freeze_timer: Timer = $'../FreezeTimer'
 
 var questions := [
-	"AIADMK releases official list\n of constituencies for 2026\n Tamil Nadu Assembly elections.",
+	"State Election Commission \n conducts Assembly Elections in a State",
 	"Viral video showing a\n 'resurrected' former Indian leader endorsing\n a candidate in Kerala is a deepfake.",
 	"Kerala Police establish 24/7\n Social Media Monitoring Cell to curb\n communal election narratives.",
 	"Leaked memo reveals Meta\n will allow political parties\n to 'force-join' users into WhatsApp groups.",
 	"Senator Mark Warner urges\n major tech firms to implement AI\n watermarking before 2026 US midterms.",
 	]
 
-var answer : = [true,false,true,false,true]
+var answer : = [false,false,true,false,true]
 @export var no_of_questions := 1
 var score : int = 0
 
-var currentQuestion:= 0
+var currentQuestion:= 2
 
 var is_game_ended:bool= false
 
@@ -92,6 +92,4 @@ func _on_quesion_timer_timeout() -> void:
 func game_over():
 	#do whatever is needed here
 	print("Doing leaderboard update")
-	if OS.get_name() == "HTML5":
-		print("HTML it is")
-		JavaScriptBridge.eval("window.updateScore(" + str(score) + ")")
+	JavaScriptBridge.eval("window.updateScore(" + str(score) + ")")
