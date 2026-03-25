@@ -47,7 +47,7 @@ offset_bottom = 144.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "Game Has Ended 
-Your Scoe is"
+Your Score is"
 label_settings = SubResource("LabelSettings_urowa")
 horizontal_alignment = 1
 vertical_alignment = 1

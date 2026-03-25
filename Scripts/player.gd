@@ -9,6 +9,7 @@ const JUMP_VELOCITY = 4.5
 @export var rightPosition:Node3D
 @export var offset:float
 @onready var animPlayer:= $Casual_Hoodie/AnimationPlayer
+@onready var game_manager: Node = $"../GameManager"
 var current_position:Vector3
 var canMove:bool = true
 
@@ -96,11 +97,11 @@ func resetPos()-> void :
 func getCurrentPos()->void:
 	match current_position:
 		leftPosition.position:
-			GameManager.check_answer(GameManager.Position.Left)
+			game_manager.check_answer(game_manager.Position.Left)
 		rightPosition.position:
-			GameManager.check_answer(GameManager.Position.Right)
+			game_manager.check_answer(game_manager.Position.Right)
 		midPosition.position:
-			GameManager.check_answer(GameManager.Position.Center)
+			game_manager.check_answer(game_manager.Position.Center)
 
 
 func _on_freeze_timer_timeout() -> void:

@@ -5,6 +5,7 @@ extends Control
 @onready var time_label: Label = $OnGame/Time
 @onready var score_label: Label = $OnGame/Score
 @onready var on_game: Node = $OnGame
+@onready var question_label : Label = $OnGame/Question
 
 signal leftclicked
 signal rightclicked
@@ -15,10 +16,9 @@ func _ready() -> void:
 
 	ui_timer.start(10)
 	score_label.text = "Score : 0"
-	GameManager.on_new_score.connect(_on_game_manager_on_new_score)
 	end_screen.set_process(false)
 	end_screen.hide()
-
+	
 
 func _process(delta: float) -> void:
 	var time_left := ui_timer.time_left
@@ -53,3 +53,6 @@ func _on_game_ended() -> void:
 	on_game.hide()
 	end_screen.text = "Game Over\nYour Score is " + str(current_score)
 	print("Game Ended")
+
+func _on_question_next(question:String):
+	question_label.text = question

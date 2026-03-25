@@ -72,11 +72,6 @@ autostart = true
 [node name="FreezeTimer" type="Timer" parent="." unique_id=1128894334]
 wait_time = 3.0
 
-[node name="GameManager" type="Node3D" parent="." unique_id=473153039]
-transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
-script = ExtResource("3_qy5om")
-question_timer_wait_time = 10.0
-
 [node name="UI" parent="." unique_id=933190388 instance=ExtResource("4_1btii")]
 
 [node name="Spawner" type="Node3D" parent="." unique_id=1239986525 node_paths=PackedStringArray("vehicle_left", "vehicle_mid", "vehicle_right")]
@@ -108,16 +103,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.706, 0.06, -4)
 
 [node name="VehicleRight" parent="Bus Spawn Locations/RightPosition" unique_id=994180598 instance=ExtResource("7_ed23l")]
 
+[node name="GameManager" type="Node3D" parent="." unique_id=473153039]
+transform = Transform3D(-1.845, 0, -1.6129502e-07, 0, 1.845, 0, 1.6129502e-07, 0, -1.845, 0, 0, 13)
+script = ExtResource("3_qy5om")
+question_timer_wait_time = 5.0
+
 [connection signal="timeout" from="SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="QuesionTimer" to="Player" method="_on_quesion_timer_timeout"]
 [connection signal="timeout" from="QuesionTimer" to="GameManager" method="_on_quesion_timer_timeout"]
 [connection signal="timeout" from="FreezeTimer" to="Player" method="_on_freeze_timer_timeout"]
 [connection signal="timeout" from="FreezeTimer" to="GameManager" method="_on_freeze_timer_timeout"]
+[connection signal="leftclicked" from="UI" to="Player" method="_on_ui_leftclicked"]
+[connection signal="rightclicked" from="UI" to="Player" method="_on_ui_rightclicked"]
 [connection signal="game_ended" from="GameManager" to="Player" method="_on_game_ended"]
 [connection signal="game_ended" from="GameManager" to="UI" method="_on_game_ended"]
+[connection signal="next_questions" from="GameManager" to="UI" method="_on_question_next"]
 [connection signal="on_new_score" from="GameManager" to="UI" method="_on_game_manager_on_new_score"]
 [connection signal="update_ui_time" from="GameManager" to="UI" method="change_timer"]
 [connection signal="vehicle_spawn" from="GameManager" to="Spawner" method="_on_vehicle_spawn"]
 [connection signal="vehicle_stop" from="GameManager" to="Spawner" method="_on_vehicle_stop"]
-[connection signal="leftclicked" from="UI" to="Player" method="_on_ui_leftclicked"]
-[connection signal="rightclicked" from="UI" to="Player" method="_on_ui_rightclicked"]
