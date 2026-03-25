@@ -13,13 +13,6 @@ dof_blur_amount = 0.28
 
 [sub_resource type="Compositor" id="Compositor_vh4eo"]
 
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qy5om"]
-dof_blur_far_enabled = true
-dof_blur_far_distance = 5.0
-dof_blur_far_transition = 20.0
-dof_blur_near_enabled = true
-dof_blur_amount = 0.18
-
 [node name="Main Game" type="Node3D" unique_id=654691836]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=124949012]
@@ -30,7 +23,6 @@ compositor = SubResource("Compositor_vh4eo")
 [node name="Camera3D" type="Camera3D" parent="." unique_id=133511448]
 transform = Transform3D(0.9999757, 0.004716473, -0.005147127, -0.00092114345, 0.81997, 0.5724058, 0.0069202264, -0.57238716, 0.81995434, 0.016305385, 3.2869956, 18.14084)
 environment = ExtResource("1_htkpn")
-attributes = SubResource("CameraAttributesPractical_qy5om")
 v_offset = 1.0
 current = true
 fov = 80.0

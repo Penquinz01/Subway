@@ -95,4 +95,3 @@ func game_over():
 	if OS.get_name() == "HTML5	":
 		print("HTML it is")
 		JavaScriptBridge.eval("window.updateScore(" + str(score) + ")")
-
