@@ -92,4 +92,4 @@ func _on_quesion_timer_timeout() -> void:
 func game_over():
 	#do whatever is needed here
 	print("Doing leaderboard update")
-	JavaScriptBridge.eval("window.updateScore(" + str(score) + ")")
+	JavaScriptBridge.eval("window.parent.updateScore(" + str(score) + ")")
