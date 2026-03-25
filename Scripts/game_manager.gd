@@ -19,7 +19,7 @@ var questions := [
 	]
 
 var answer : = [true,false,true,false,true]
-@export var no_of_questions := 5
+@export var no_of_questions := 1
 var score : int = 0
 
 var currentQuestion:= 0
@@ -92,6 +92,6 @@ func _on_quesion_timer_timeout() -> void:
 func game_over():
 	#do whatever is needed here
 	print("Doing leaderboard update")
-	if OS.get_name() == "HTML5	":
+	if OS.get_name() == "HTML5":
 		print("HTML it is")
 		JavaScriptBridge.eval("window.updateScore(" + str(score) + ")")
