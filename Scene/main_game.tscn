@@ -59,7 +59,6 @@ autostart = true
 
 [node name="QuesionTimer" type="Timer" parent="." unique_id=1256137884]
 wait_time = 10.0
-autostart = true
 
 [node name="FreezeTimer" type="Timer" parent="." unique_id=1128894334]
 wait_time = 3.0
@@ -107,10 +106,14 @@ question_timer_wait_time = 15.0
 [connection signal="timeout" from="FreezeTimer" to="GameManager" method="_on_freeze_timer_timeout"]
 [connection signal="leftclicked" from="UI" to="Player" method="_on_ui_leftclicked"]
 [connection signal="rightclicked" from="UI" to="Player" method="_on_ui_rightclicked"]
+[connection signal="startclicked" from="UI" to="Player" method="_on_game_started"]
+[connection signal="startclicked" from="UI" to="GameManager" method="game_start"]
 [connection signal="game_ended" from="GameManager" to="Player" method="_on_game_ended"]
 [connection signal="game_ended" from="GameManager" to="UI" method="_on_game_ended"]
 [connection signal="next_questions" from="GameManager" to="UI" method="_on_question_next"]
 [connection signal="on_new_score" from="GameManager" to="UI" method="_on_game_manager_on_new_score"]
+[connection signal="question_ended" from="GameManager" to="UI" method="hide_timer"]
+[connection signal="question_started" from="GameManager" to="UI" method="show_timer"]
 [connection signal="update_ui_time" from="GameManager" to="UI" method="change_timer"]
 [connection signal="vehicle_spawn" from="GameManager" to="Spawner" method="_on_vehicle_spawn"]
 [connection signal="vehicle_stop" from="GameManager" to="Spawner" method="_on_vehicle_stop"]

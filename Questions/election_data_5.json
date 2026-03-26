@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Only government workers are allowed to vote.",
+    "is_truth": false
+  },
+  {
+    "question": "Voting starts early in the morning.",
+    "is_truth": true
+  },
+  {
+    "question": "You can vote by sending a letter to the office.",
+    "is_truth": false
+  },
+  {
+    "question": "Candidates use posters to tell people about themselves.",
+    "is_truth": true
+  },
+  {
+    "question": "The voting machine makes a beep sound after you vote.",
+    "is_truth": true
+  },
+  {
+    "question": "You can wear a party t-shirt inside the voting booth.",
+    "is_truth": false
+  },
+  {
+    "question": "There is a limit on how much money a candidate can spend.",
+    "is_truth": true
+  },
+  {
+    "question": "The capital of India is New Delhi.",
+    "is_truth": true
+  },
+  {
+    "question": "The President of India is elected directly by the people.",
+    "is_truth": false
+  },
+  {
+    "question": "Voter ID cards have a photo of the voter.",
+    "is_truth": true
+  }
+]

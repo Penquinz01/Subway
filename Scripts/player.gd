@@ -12,6 +12,8 @@ const JUMP_VELOCITY = 4.5
 @onready var game_manager: Node = $"../GameManager"
 var current_position:Vector3
 var canMove:bool = true
+var is_game_ended:bool = false
+var is_started:bool = false
 
 
 var dir:int
@@ -23,7 +25,7 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if !canMove:
+	if !canMove or is_game_ended or is_started == false:
 		return
 	move();
 	
@@ -122,3 +124,7 @@ func _on_ui_rightclicked() -> void:
 
 func _on_game_ended()->void:
 	canMove = false
+	is_game_ended = true
+
+func _on_game_started()->void:
+	is_started = true

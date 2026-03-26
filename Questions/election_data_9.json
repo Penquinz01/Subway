@@ -1,0 +1,42 @@
+[
+  {
+    "question": "The state of Kerala has 140 assembly seats.",
+    "is_truth": true
+  },
+  {
+    "question": "You can vote if you are a tourist from another country.",
+    "is_truth": false
+  },
+  {
+    "question": "The ballot paper was used before the machines came.",
+    "is_truth": true
+  },
+  {
+    "question": "You can vote using your school ID card.",
+    "is_truth": false
+  },
+  {
+    "question": "The results are kept secret until counting day.",
+    "is_truth": true
+  },
+  {
+    "question": "A person can be a candidate in two places.",
+    "is_truth": true
+  },
+  {
+    "question": "You can vote for a candidate who has died.",
+    "is_truth": false
+  },
+  {
+    "question": "The ink is applied to the left-hand index finger.",
+    "is_truth": true
+  },
+  {
+    "question": "Elections are held in phases across the country.",
+    "is_truth": true
+  },
+  {
+    "question": "The Prime Minister chooses who wins the seats.",
+    "is_truth": false
+  }
+]

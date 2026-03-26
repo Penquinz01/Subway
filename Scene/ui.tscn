@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://i8icjwdofbgl" path="res://Scene/ui.gd" id="1_bpjw8"]
 [ext_resource type="Texture2D" uid="uid://7w48yjugv2lw" path="res://UI/direction_right.png" id="3_lfpiq"]
 [ext_resource type="Texture2D" uid="uid://daxnqpnfxaqiq" path="res://UI/direction_left.png" id="4_urowa"]
+[ext_resource type="Texture2D" uid="uid://du4ic3kkyd1jd" path="res://UI/Fonts/button_square_wide.png" id="5_ls17r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_urowa"]
 font = ExtResource("1_3i1b0")
@@ -23,6 +24,16 @@ font_size = 100
 [sub_resource type="LabelSettings" id="LabelSettings_bpjw8"]
 font = ExtResource("1_3i1b0")
 font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ls17r"]
+font = ExtResource("1_3i1b0")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_thkpk"]
+font = ExtResource("1_3i1b0")
+font_size = 28
+font_color = Color(0.7190764, 0.7190765, 0.71907634, 1)
 
 [node name="UI" type="Control" unique_id=933190388]
 layout_mode = 3
@@ -62,15 +73,16 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_top = 57.0
-offset_right = 700.0
-offset_bottom = 389.0
+offset_left = 114.0
+offset_top = 65.0
+offset_right = 575.0
+offset_bottom = 397.0
 grow_horizontal = 2
 text = "Is It True Or False?"
 label_settings = SubResource("LabelSettings_6jcrg")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Guides True" type="Label" parent="OnGame" unique_id=545600339]
 layout_mode = 0
@@ -124,5 +136,56 @@ offset_bottom = 79.0
 text = "Score : "
 label_settings = SubResource("LabelSettings_bpjw8")
 
+[node name="Start Page" type="Control" parent="." unique_id=665986982]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = -123.0
+offset_right = 726.0
+offset_bottom = 1157.0
+
+[node name="Button" type="Button" parent="Start Page" unique_id=468637755]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -480.0
+offset_right = 84.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("5_ls17r")
+
+[node name="Label" type="Label" parent="Start Page/Button" unique_id=1170207286]
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 133.0
+text = "Start"
+label_settings = SubResource("LabelSettings_ls17r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Click Here to Start" type="Label" parent="Start Page" unique_id=587237633]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = 80.71503
+offset_right = 360.0
+offset_bottom = 193.71503
+grow_horizontal = 2
+grow_vertical = 2
+text = "       Click Here To Start"
+label_settings = SubResource("LabelSettings_thkpk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="OnGame/Right" to="." method="_on_right_pressed"]
 [connection signal="pressed" from="OnGame/Left" to="." method="_on_left_pressed"]
+[connection signal="button_down" from="Start Page/Button" to="." method="_on_start_pressed"]

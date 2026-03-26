@@ -6,14 +6,15 @@ extends Control
 @onready var score_label: Label = $OnGame/Score
 @onready var on_game: Node = $OnGame
 @onready var question_label : Label = $OnGame/Question
-
+@onready var start_page: Control = $"Start Page"
 signal leftclicked
 signal rightclicked
+signal startclicked
 
 var current_score :int = 0
 
 func _ready() -> void:
-
+	on_game.hide()
 	ui_timer.start(15)
 	score_label.text = "Score : 0"
 	end_screen.set_process(false)
@@ -22,7 +23,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	var time_left := ui_timer.time_left
-	time_label.text = str(int(time_left))
+	time_label.text = str(int(time_left+1))
 
 
 func change_timer(time:int):
@@ -56,3 +57,15 @@ func _on_game_ended() -> void:
 
 func _on_question_next(question:String):
 	question_label.text = question
+
+func _on_start_pressed() -> void:
+	start_page.hide()
+	on_game.show()
+	startclicked.emit()
+
+func hide_timer() -> void:
+	ui_timer.stop()
+	time_label.hide()
+
+func show_timer() -> void:
+	time_label.show()

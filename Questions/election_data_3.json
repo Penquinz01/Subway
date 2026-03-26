@@ -1,0 +1,42 @@
+[
+  {
+    "question": "The Election Commission manages the voting process.",
+    "is_truth": true
+  },
+  {
+    "question": "You can vote if you are 15 years old.",
+    "is_truth": false
+  },
+  {
+    "question": "The ink on the finger stays for many days.",
+    "is_truth": true
+  },
+  {
+    "question": "You must tell the police who you voted for.",
+    "is_truth": false
+  },
+  {
+    "question": "The results are usually announced a few days after voting.",
+    "is_truth": true
+  },
+  {
+    "question": "One person has only one vote.",
+    "is_truth": true
+  },
+  {
+    "question": "You can bring a dog inside the voting booth.",
+    "is_truth": false
+  },
+  {
+    "question": "A candidate can be a man or a woman.",
+    "is_truth": true
+  },
+  {
+    "question": "Voters can choose 'None of the Above' (NOTA).",
+    "is_truth": true
+  },
+  {
+    "question": "The army decides who wins the election.",
+    "is_truth": false
+  }
+]
