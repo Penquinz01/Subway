@@ -46,6 +46,7 @@ func _ready() -> void:
 	update_ui_time.emit(question_timer_wait_time)
 	on_new_score.emit(0)
 	var days_left:int = calculate_days_difference()
+	print("Days left: ", days_left)
 	questions = FileLoader.load_file(days_left+1)
 	questions.shuffle()
 	print(questions)
@@ -120,7 +121,7 @@ func calculate_days_difference() -> int:
 	var target_seconds = Time.get_unix_time_from_datetime_dict(target_date_dict)
 
 	# 3. Subtract to get total seconds difference
-	var diff_seconds = target_seconds - today_seconds
+	var diff_seconds =today_seconds- target_seconds 
 	
 	# 4. Convert seconds to days
 	# (60 seconds * 60 minutes * 24 hours = 86400)
