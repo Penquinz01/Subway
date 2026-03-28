@@ -1,42 +1,38 @@
 [
   {
-    "question": "You must be 18 years old to vote in India.",
-    "is_truth": true
+	"question": "You must be 18 years old to vote in India.",
+	"is_truth": true
   },
   {
-    "question": "A person can vote five times in the same day.",
-    "is_truth": false
+	"question": "A person can vote five times in the same day.",
+	"is_truth": false
   },
   {
-    "question": "Voting is done in secret so no one knows your choice.",
-    "is_truth": true
+	"question": "Voting is done in secret so no one knows your choice.",
+	"is_truth": true
   },
   {
-    "question": "You need an ID card to vote at the booth.",
-    "is_truth": true
+	"question": "You need an ID card to vote at the booth.",
+	"is_truth": true
   },
   {
-    "question": "Only people with a lot of money can vote.",
-    "is_truth": false
+	"question": "Only people with a lot of money can vote.",
+	"is_truth": false
   },
   {
-    "question": "Ink is put on your finger after you vote.",
-    "is_truth": true
+	"question": "Ink is put on your finger after you vote.",
+	"is_truth": true
   },
   {
-    "question": "You can vote using a computer at your home.",
-    "is_truth": false
+	"question": "You can vote using a computer at your home.",
+	"is_truth": false
   },
   {
-    "question": "Election day is a holiday for workers.",
-    "is_truth": true
+	"question": "Election day is a holiday for workers.",
+	"is_truth": true
   },
   {
-    "question": "Every political party has its own symbol.",
-    "is_truth": true
+	"question": "Every political party has its own symbol.",
+	"is_truth": true
   },
-  {
-    "question": "The winner is the person who gets the most votes.",
-    "is_truth": true
-  }
 ]

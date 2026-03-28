@@ -1,42 +1,34 @@
 [
   {
-    "question": "Young people are encouraged to vote for the first time.",
-    "is_truth": true
+	"question": "Young people are encouraged to vote for the first time.",
+	"is_truth": true
   },
   {
-    "question": "You can vote by showing a photo on your phone.",
-    "is_truth": false
+	"question": "You can vote by showing a photo on your phone.",
+	"is_truth": false
   },
   {
-    "question": "A candidate must be an Indian citizen.",
-    "is_truth": true
+	"question": "A candidate must be an Indian citizen.",
+	"is_truth": true
   },
   {
-    "question": "Political parties have a manifesto of their plans.",
-    "is_truth": true
+	"question": "You can vote for the same person every year.",
+	"is_truth": false
   },
   {
-    "question": "You can vote for the same person every year.",
-    "is_truth": false
+	"question": "The voting machine has a 'cancel' button.",
+	"is_truth": false
   },
   {
-    "question": "The voting machine has a 'cancel' button.",
-    "is_truth": false
+	"question": "Voters can find their names online.",
+	"is_truth": true
   },
   {
-    "question": "The election rules are the same for everyone.",
-    "is_truth": true
+	"question": "The winner becomes a Member of the Assembly.",
+	"is_truth": true
   },
   {
-    "question": "Voters can find their names online.",
-    "is_truth": true
-  },
-  {
-    "question": "The winner becomes a Member of the Assembly.",
-    "is_truth": true
-  },
-  {
-    "question": "Only doctors and engineers are allowed to vote.",
-    "is_truth": false
+	"question": "Only doctors and engineers are allowed to vote.",
+	"is_truth": false
   }
 ]

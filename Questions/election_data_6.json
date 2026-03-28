@@ -1,42 +1,34 @@
 [
   {
-    "question": "You can take a photo of the voting machine.",
-    "is_truth": false
+	"question": "You can take a photo of the voting machine.",
+	"is_truth": false
   },
   {
-    "question": "The ink is purple in color.",
-    "is_truth": true
+	"question": "The ink is purple in color.",
+	"is_truth": true
   },
   {
-    "question": "You can vote if you are traveling in another country.",
-    "is_truth": false
+	"question": "You can vote if you are traveling in another country.",
+	"is_truth": false
   },
   {
-    "question": "A candidate can belong to more than one party.",
-    "is_truth": false
+	"question": "A candidate can belong to more than one party.",
+	"is_truth": false
   },
   {
-    "question": "The symbols are printed on the voting machine.",
-    "is_truth": true
+	"question": "Polling officers help you if you have a doubt.",
+	"is_truth": true
   },
   {
-    "question": "Polling officers help you if you have a doubt.",
-    "is_truth": true
+	"question": "You can use a fake name to vote.",
+	"is_truth": false
   },
   {
-    "question": "You can use a fake name to vote.",
-    "is_truth": false
+	"question": "Every state has the same number of seats.",
+	"is_truth": false
   },
   {
-    "question": "The counting of votes happens in a big hall.",
-    "is_truth": true
-  },
-  {
-    "question": "Every state has the same number of seats.",
-    "is_truth": false
-  },
-  {
-    "question": "Loudspeakers are banned late at night during elections.",
-    "is_truth": true
+	"question": "Loudspeakers are banned late at night during elections.",
+	"is_truth": true
   }
 ]

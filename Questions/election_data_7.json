@@ -1,42 +1,38 @@
 [
   {
-    "question": "A voter must be on the official voter list.",
-    "is_truth": true
+	"question": "A voter must be on the official voter list.",
+	"is_truth": true
   },
   {
-    "question": "You can vote by calling a special phone number.",
-    "is_truth": false
+	"question": "You can vote by calling a special phone number.",
+	"is_truth": false
   },
   {
-    "question": "The Governor is the head of the state.",
-    "is_truth": true
+	"question": "The Governor is the head of the state.",
+	"is_truth": true
   },
   {
-    "question": "Candidates can go to your house to ask for votes.",
-    "is_truth": true
+	"question": "Candidates can go to your house to ask for votes.",
+	"is_truth": true
   },
   {
-    "question": "The voting machines are kept in a safe room.",
-    "is_truth": true
+	"question": "The voting machines are kept in a safe room.",
+	"is_truth": true
   },
   {
-    "question": "You can buy a vote from someone else.",
-    "is_truth": false
+	"question": "You can buy a vote from someone else.",
+	"is_truth": false
   },
   {
-    "question": "People with disabilities get extra help to vote.",
-    "is_truth": true
+	"question": "People with disabilities get extra help to vote.",
+	"is_truth": true
   },
   {
-    "question": "A candidate must have a clean criminal record.",
-    "is_truth": false
+	"question": "The Election Commission is an independent body.",
+	"is_truth": true
   },
   {
-    "question": "The Election Commission is an independent body.",
-    "is_truth": true
-  },
-  {
-    "question": "You can vote twice if you have two ID cards.",
-    "is_truth": false
+	"question": "You can vote twice if you have two ID cards.",
+	"is_truth": false
   }
 ]

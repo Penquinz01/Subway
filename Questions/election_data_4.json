@@ -1,42 +1,38 @@
 [
   {
-    "question": "Kerala has its own state election.",
-    "is_truth": true
+	"question": "Kerala has its own state election.",
+	"is_truth": true
   },
   {
-    "question": "You can vote using your thumbprint if you cannot sign.",
-    "is_truth": true
+	"question": "You can vote using your thumbprint if you cannot sign.",
+	"is_truth": true
   },
   {
-    "question": "Politicians can make speeches on the day of voting.",
-    "is_truth": false
+	"question": "Politicians can make speeches on the day of voting.",
+	"is_truth": false
   },
   {
-    "question": "The voting box is made of glass.",
-    "is_truth": false
+	"question": "There are special lines for senior citizens to vote.",
+	"is_truth": true
   },
   {
-    "question": "There are special lines for senior citizens to vote.",
-    "is_truth": true
+	"question": "You can vote in two different states.",
+	"is_truth": false
   },
   {
-    "question": "You can vote in two different states.",
-    "is_truth": false
+	"question": "The election symbol helps people who cannot read.",
+	"is_truth": true
   },
   {
-    "question": "The election symbol helps people who cannot read.",
-    "is_truth": true
+	"question": "A person must be 25 years old to be a candidate.",
+	"is_truth": true
   },
   {
-    "question": "A person must be 25 years old to be a candidate.",
-    "is_truth": true
+	"question": "You can change your vote after pressing the button.",
+	"is_truth": false
   },
   {
-    "question": "You can change your vote after pressing the button.",
-    "is_truth": false
-  },
-  {
-    "question": "Election results are final once the counting is over.",
-    "is_truth": true
+	"question": "Election results are final once the counting is over.",
+	"is_truth": true
   }
 ]

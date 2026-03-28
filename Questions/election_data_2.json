@@ -1,42 +1,38 @@
 [
   {
-    "question": "You can vote for two different people at once.",
-    "is_truth": false
+	"question": "You can vote for two different people at once.",
+	"is_truth": false
   },
   {
-    "question": "The voting machine is called an EVM.",
-    "is_truth": true
+	"question": "The voting machine is called an EVM.",
+	"is_truth": true
   },
   {
-    "question": "Elections in India happen every 10 years.",
-    "is_truth": false
+	"question": "Elections in India happen every 10 years.",
+	"is_truth": false
   },
   {
-    "question": "A Chief Minister leads the state government.",
-    "is_truth": true
+	"question": "A Chief Minister leads the state government.",
+	"is_truth": true
   },
   {
-    "question": "You can see who your friend voted for on a screen.",
-    "is_truth": false
+	"question": "You can see who your friend voted for on a screen.",
+	"is_truth": false
   },
   {
-    "question": "Schools are often used as places to vote.",
-    "is_truth": true
+	"question": "Schools are often used as places to vote.",
+	"is_truth": true
   },
   {
-    "question": "Candidates can give gifts to voters to get votes.",
-    "is_truth": false
+	"question": "Candidates can give gifts to voters to get votes.",
+	"is_truth": false
   },
   {
-    "question": "The Prime Minister is the leader of the country.",
-    "is_truth": true
+	"question": "You must be a citizen of India to vote.",
+	"is_truth": true
   },
   {
-    "question": "You must be a citizen of India to vote.",
-    "is_truth": true
-  },
-  {
-    "question": "You can vote at any time of the night.",
-    "is_truth": false
+	"question": "You can vote at any time of the night.",
+	"is_truth": false
   }
 ]
