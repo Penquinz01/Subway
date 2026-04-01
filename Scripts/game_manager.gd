@@ -26,8 +26,8 @@ var is_game_started:bool = false
 
 var target_date_dict = {
 		"year": 2026,
-		"month": 3,
-		"day": 28,
+		"month": 4,
+		"day": 2,
 		"hour": 0,
 		"minute": 0,
 		"second": 0

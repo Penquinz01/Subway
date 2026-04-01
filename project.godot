@@ -14,6 +14,7 @@ config/name="SubWay"
 run/main_scene="uid://caqb75q56y55h"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/show_image=false
 boot_splash/image="uid://bxobulsqatnxb"
 config/icon="res://icon.svg"
 

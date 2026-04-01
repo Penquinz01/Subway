@@ -24,11 +24,7 @@
 	"is_truth": true
   },
   {
-	"question": "You can bring a dog inside the voting booth.",
-	"is_truth": false
-  },
-  {
-	"question": "A candidate can be a man or a woman.",
+	"question": "A candidate can be a any gender.",
 	"is_truth": true
   },
   {
